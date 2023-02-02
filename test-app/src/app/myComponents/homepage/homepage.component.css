@@ -1,0 +1,18 @@
+.nav-btn-login{
+    visibility: hidden;
+}
+
+.table-heading{
+    text-align: center;
+    color: brown;
+}
+
+.table{
+    border: 1px solid;
+    margin-top: 2rem;
+}
+
+thead {
+    font-weight: 500;
+    font-size: 1.2rem;
+}

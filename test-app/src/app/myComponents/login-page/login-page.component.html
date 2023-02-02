@@ -1,0 +1,56 @@
+<app-todo></app-todo>
+<div>
+    <h3>Welcome to <span class="doc-head">Docquity</span></h3>
+
+    <form class="form_container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div class="headingsContainer">
+            <h5>Sign in</h5>
+        </div>
+        <div *ngIf="submitted && !userExists" class="text-danger text-invalid">
+            Invalid user! <br> Please check the credentials
+        </div>
+
+        <div class="mainContainer">
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input class="form-control" type="email" id="email_id" placeholder="Enter email" formControlName="email"
+                    [ngClass]="{'is-invalid':submitted && form['email'].errors}" />
+                <div *ngIf="submitted && form['email'].errors" class="text-danger">
+                    <div *ngIf="submitted && form['email'].errors['required']">
+                        Email is required
+                    </div>
+                    <div *ngIf="submitted && form['email'].errors['pattern']">
+                        Please provide docquity ID
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Your password</label>
+                <input class="form-control" type="password" id="pass_id" placeholder="Enter password"
+                    formControlName="password" [ngClass]="{'is-invalid':submitted && form['password'].errors}" />
+                <div *ngIf="submitted && form['password'].errors" class="text-danger">
+                    <div *ngIf="submitted && form['password'].errors['required']">
+                        Password is required
+                    </div>
+                    <div *ngIf="submitted && form['password'].errors['pattern']">
+                        <p> Please enter valid password <br> Password must contain 8 or more characters, <br> with at
+                            least one number and one uppercase and one lowercase letter.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button id="btn_submit" type="submit">Login</button>
+            </div>
+
+            <p class="register">
+                Not a member? <a routerLink="/signup"> Register here!</a>
+            </p>
+        </div>
+
+    </form>
+
+</div>

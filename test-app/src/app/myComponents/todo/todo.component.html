@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <!-- <div class="cstm-nav"> -->
+        <a class="navbar-brand doc-head" href="/"><img class="img-nav-head" src="assets/img/logo.png" alt="" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- </div> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 list-items">
+                <li *ngIf="!isLoggedIn" class="nav-item">
+                    <a class="nav-link nav-btn-login" routerLink="/login" routerLinkActive="activebutton"
+                        ariaCurrentWhenActive="page">Login</a>
+                </li>
+                <li *ngIf="!isLoggedIn" class="nav-item">
+                    <a class="nav-link nav-btn-signup" routerLink="/signup" routerLinkActive="activebutton"
+                        ariaCurrentWhenActive="page">Signup</a>
+                </li>
+                <li *ngIf="isLoggedIn" class="nav-item">
+                    <a class="nav-link nav-btn-logout" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
+                        (click)="logout()" routerLink="/login">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<!-- <footer>
+      <lottie-player class="img_lottie" src="https://assets6.lottiefiles.com/packages/lf20_zmywgnrb.json"
+        background="transparent" speed="0.7" style="width: 100px; height: 100px" loop autoplay>
+      </lottie-player>
+    </footer> -->

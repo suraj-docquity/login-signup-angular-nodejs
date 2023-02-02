@@ -1,0 +1,27 @@
+<app-todo></app-todo>
+<div class="container">
+    <div>
+        <h4 class="table-heading">List Of All Users</h4>
+    </div>
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <td>Name</td>
+                <td>Username</td>
+                <td>Phone</td>
+                <td>Email</td>
+                <!-- <td>Password</td> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userData">
+                <td>{{user.Name}}</td>
+                <td>{{user.Username}}</td>
+                <td>{{user.Number}}</td>
+                <td>{{user.Email}}</td>
+                <!-- <td>{{user.Password}}</td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>

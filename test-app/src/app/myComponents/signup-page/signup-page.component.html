@@ -1,0 +1,72 @@
+<app-todo></app-todo>
+<div>
+   <h3>Welcome to <span class="doc-head">Docquity</span></h3>
+
+   <form class="form_container" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+      <div class="headingsContainer">
+         <h5>Sign up</h5>
+      </div>
+
+      <div class="mainContainer">
+         <div class="form-group">
+            <label for="name">Your Name</label>
+            <input class="form-control" type="text" id="name_id" placeholder="Enter name" formControlName="name"
+               [ngClass]="{'is-invalid':submitted && form['name'].errors}" />
+         </div>
+         <div class="form-group">
+            <label for="username">Your Username</label>
+            <input class="form-control" type="text" id="user_id" placeholder="Enter username" formControlName="username"
+               [ngClass]="{'is-invalid':submitted && form['username'].errors}" />
+         </div>
+         <div class="form-group">
+            <label for="number">Your Phone Number</label>
+            <input class="form-control" type="number" id="phone_id" placeholder="Enter phone number"
+               formControlName="phone" [ngClass]="{'is-invalid':submitted && form['phone'].errors}" />
+            <div *ngIf="submitted && form['phone'].errors" class="text-danger">
+               <div *ngIf="submitted && form['phone'].errors['required']">
+                  Phone number is required
+               </div>
+               <div *ngIf="submitted && form['phone'].errors['pattern']">
+                  Please provide valid phone number of 10 digits
+               </div>
+            </div>
+
+         </div>
+         <div class="form-group">
+            <label for="email">Your Email</label>
+            <input class="form-control" type="email" id="email_id" placeholder="Enter email" formControlName="email"
+               [ngClass]="{'is-invalid':submitted && form['email'].errors}" />
+            <div *ngIf="submitted && form['email'].errors" class="text-danger">
+               <div *ngIf="submitted && form['email'].errors['required']">
+                  Email is required
+               </div>
+               <div *ngIf="submitted && form['email'].errors['pattern']">
+                  Please provide docquity ID
+               </div>
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="password">Your Password</label>
+            <input class="form-control" id="pass_id" type="password" placeholder="Enter password"
+               formControlName="password" [ngClass]="{'is-invalid':submitted && form['password'].errors}" />
+            <div *ngIf="submitted && form['password'].errors" class="text-danger">
+               <div *ngIf="submitted && form['password'].errors['required']">
+                  Password is required
+               </div>
+               <div *ngIf="submitted && form['password'].errors['pattern']">
+                  <p> Please enter valid password <br> Password must contain 8 or more characters, <br> with at
+                     least one number and one uppercase and one lowercase letter.</p>
+               </div>
+            </div>
+         </div>
+         <div class="form-group">
+            <div *ngIf="submitted && isRegistered" class="text-danger text-invalid">
+               User with this email already exists
+            </div>
+            <button id="btn_submit" type="submit">Register</button>
+         </div>
+         <p class="register">Registered ? <a routerLink="/login">Login Here!</a></p>
+      </div>
+   </form>
+</div>

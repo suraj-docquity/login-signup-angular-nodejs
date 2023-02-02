@@ -1,0 +1,169 @@
+body {
+  font-family: sans-serif;
+}
+
+h3 {
+  text-align: center;
+}
+
+.doc-head {
+  color: rgb(247, 53, 53);
+}
+
+form {
+  width: 30rem;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 20px 25px;
+}
+
+.form_container {
+  box-shadow: rgb(255 120 120) 0px 4px 8px -2px, #f00 0px 0px 0px 1px;
+}
+
+.form_container h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.errContainer {
+  display: none;
+  color: #f00;
+  font-size: 0.8rem;
+}
+
+.showErr {
+  display: block;
+}
+
+.hideErr {
+  display: none;
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px 18px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.error_border {
+  box-shadow: rgb(255 120 120) 0px 2px 2px -2px, #f00 0px 0px 0px 1px;
+  border: 0;
+}
+
+.pass_border {
+  box-shadow: rgb(26 255 0) 0px 2px 2px -2px, rgb(0 255 55) 0px 0px 0px 1px;
+  border: 0;
+}
+
+.passBox {
+  color: red;
+  font-size: 12px;
+  text-align: justify;
+  display: none;
+}
+
+.passBox p {
+  padding: 10px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.passBoxShow {
+  display: block;
+}
+
+.passBoxHide {
+  display: none;
+}
+
+button {
+  background-color: #ffffff;
+  color: rgb(255, 0, 0);
+  padding: 14px 20px;
+  border-radius: 5px;
+  margin: 7px 0;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+button:hover {
+  box-shadow: rgba(250, 152, 152, 0.785) 0px 0px 0px 3px;
+  letter-spacing: 1.8px;
+  border: none;
+  cursor: pointer;
+}
+
+.invalid_user {
+  text-align: center;
+  color: #f00;
+}
+
+.headingsContainer {
+  text-align: center;
+}
+
+.imgContainer {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background: aliceblue;
+}
+
+.imgContainer img {
+  width: 200px;
+}
+
+.mainContainer {
+  padding: 16px;
+}
+
+.register {
+  text-align: center;
+}
+
+.register a {
+  color: rgb(74, 146, 235);
+}
+
+.register a:link {
+  text-decoration: none;
+}
+
+.nav-btn-logout {
+  visibility: hidden;
+}
+
+.text-invalid {
+  text-align: center;
+  font-weight: 700;
+}
+
+.text-danger {
+  font-size: 0.8rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Media queries for the responsiveness of the page */
+@media screen and (max-width: 600px) {
+  form {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  form {
+    width: 20rem;
+  }
+}

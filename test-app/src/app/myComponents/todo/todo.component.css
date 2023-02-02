@@ -1,0 +1,35 @@
+.doc-head {
+    color: rgb(247, 53, 53);
+}
+
+.img-nav-head {
+    height: 40px;
+}
+
+.cstm-nav {
+    display: flex;
+}
+
+.activebutton {
+    color: red;
+}
+
+.navbar-collapse {
+    flex-grow: 1;
+    align-items: center;
+}
+
+/* .list-items{
+    width: 20%;
+    text-align: center;
+    margin-top: 10px;
+} */
+
+
+/* When the browser is at least 600px and above */
+@media screen and (min-width: 600px) {
+    .navbar-collapse {
+        flex-grow: 0;
+        align-items: center;
+    }
+}
